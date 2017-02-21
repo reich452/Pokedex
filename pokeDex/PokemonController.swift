@@ -44,7 +44,7 @@ class PokemonController {
             ImageController.image(forURL: pokemon.imageEndpoint, completion: { (image) in
                 pokemon.image = image
                 
-                completion(pokemon) // wont run unitl ther is an image set
+                completion(pokemon) // wont run unitl ther is an image set0
             })
            
             

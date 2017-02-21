@@ -19,6 +19,7 @@ class PokedexViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self 
         
         PokemonController.fetchPokemon(for: "test") { (pokemon) in
             print("Something")

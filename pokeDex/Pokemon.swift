@@ -27,8 +27,8 @@ class Pokemon {
     
     init?(dictionary: [String:Any]) {
         guard let name = dictionary[nameKey] as? String,   // holds all the images
-            let spriteDictionary = dictionary["sprites"] as? [String: String],
-            let imageEndpoint = spriteDictionary[imageEndPointKey],
+            let spriteDictionary = dictionary["sprites"] as? [String: Any],
+            let imageEndpoint = spriteDictionary[imageEndPointKey] as? String,
             let movesArray = dictionary[movesCountKey] as? [[String:Any]],
             let id = dictionary[idKey] as? Int
             else { return nil }
